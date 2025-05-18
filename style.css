@@ -1,0 +1,116 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Kontener dla responsywnego wideo z iframe */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporcje 16:9 */
+    padding-top: 30px; /* Zapas dla kontrolek */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 15px; /* Odstęp pod kontenerem */
+    border: 1px solid #ccc; /* Delikatna ramka */
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styl dla wideo z pliku */
+video {
+    max-width: 100%; /* Responsywność */
+    height: auto;
+    display: block; /* Unikanie dodatkowego miejsca pod elementem */
+    margin-top: 10px;
+    border: 1px solid #ccc; /* Delikatna ramka */
+}
+
+/* Styl dla audio */
+audio {
+    width: 100%; /* Zajmuje całą dostępną szerokość */
+    margin-top: 10px;
+}
+
+.wskazowka {
+    font-size: 0.9em;
+    color: #555;
+    background-color: #eef;
+    padding: 10px;
+    border-left: 4px solid #66f;
+    margin-top: 15px;
+}
+
+code {
+    background-color: #eee;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
+}

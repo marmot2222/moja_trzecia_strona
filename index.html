@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integracja Multimediów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Moja Strona z Multimediami</h1>
+        <nav>
+            <ul>
+                <li><a href="#wideo-plik">Wideo z Pliku</a></li>
+                <li><a href="#wideo-youtube">Wideo z YouTube</a></li>
+                <li><a href="#dzwiek">Dźwięk z Pliku</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="wprowadzenie">
+            <h2>Wprowadzenie</h2>
+            <p>Na tej stronie przetestujemy różne sposoby dodawania dźwięku i wideo do strony internetowej.</p>
+        </section>
+
+        <!-- Miejsce na sekcję Wideo z Pliku - dodamy ją w kroku 3 -->
+<!-- Sekcja z wideo z pliku -->
+<section id="wideo-plik">
+    <h2>Wideo z Pliku (MP4)</h2>
+    <p>To jest przykład osadzenia pliku wideo bezpośrednio z folderu projektu za pomocą tagu <code>&lt;video&gt;</code>.</p>
+    <video controls width="600"> <!-- Atrybut 'controls' dodaje przyciski play/pauza/głośność -->
+        <!-- Upewnij się, że plik 'moje_wideo.mp4' znajduje się w folderze 'video' -->
+        <source src="video/moje_wideo.mp4" type="video/mp4">
+        <!-- Komunikat dla przeglądarek, które nie obsługują tagu video lub formatu MP4 -->
+        Twoja przeglądarka nie obsługuje tagu video lub formatu MP4. Spróbuj użyć innej przeglądarki.
+    </video>
+    <p class="wskazowka">
+        Użyliśmy tagu <code>&lt;video&gt;</code> z atrybutem <code>controls</code>. Wewnątrz umieściliśmy tag <code>&lt;source&gt;</code> ze ścieżką <code>video/moje_wideo.mp4</code>, ponieważ plik znajduje się w podfolderze 'video'. Atrybut <code>width="600"</code> ustawia szerokość, ale CSS może ją nadpisać dla responsywności.
+    </p>
+</section>
+        <!-- Sekcja z wideo z YouTube -->
+        <section id="wideo-youtube">
+            <h2>Wideo z YouTube (iframe)</h2>
+            <p>Poniżej znajduje się przykładowe wideo osadzone z YouTube za pomocą tagu <code>&lt;iframe&gt;</code>. W ćwiczeniu podmienisz je na własne.</p>
+            <div class="video-container">
+                <!-- Poniższy iframe zostanie zastąpiony kodem z YouTube w kroku 4 -->
+                <iframe
+                 width="560" height="315"
+                  src="https://www.youtube.com/embed/jNQXAC9IVRw?si=Z5ATZsBRHUQo0bvJ"
+                  title="YouTube video player"
+                   frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                     referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen>
+                </iframe>
+            </div>
+            <p class="wskazowka">Pamiętaj, aby uzyskać kod do osadzenia bezpośrednio ze strony YouTube (Udostępnij -> Umieść).</p>
+        </section>
+
+        <!-- Sekcja z dźwiękiem z pliku -->
+        <section id="dzwiek">
+            <h2>Dźwięk z Pliku (MP3)</h2>
+            <p>To jest przykład osadzenia pliku dźwiękowego za pomocą tagu <code>&lt;audio&gt;</code>.</p>
+            <audio controls>
+                <!-- Poniższy source zostanie zaktualizowany w kroku 5 -->
+                <source src="audio/moj_dzwiek.mp3" type="audio/mpeg">
+                Twoja przeglądarka nie obsługuje elementu audio.
+            </audio>
+            <p class="wskazowka">Upewnij się, że ścieżka w atrybucie <code>src</code> jest poprawna.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Moja Strona Multimedialna</p>
+    </footer>
+
+</body>
+</html>
